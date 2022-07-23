@@ -18,7 +18,8 @@ public class HTMLCheck extends Check{
       ArrayList <String> Html=new ArrayList<>(Arrays.asList("<img","<table","<p","<a href"));
       for(String tag :Html){  
       if (message.contains(tag)){
-        return("HTML proibido");
+          System.out.println("HTML proibido");
+          return null;
         }
       }
       return Next(message);

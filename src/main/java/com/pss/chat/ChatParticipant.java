@@ -25,12 +25,12 @@ public class ChatParticipant extends Colleague {
 
     public void send(String message) {
         Check chain = Check.set(new CharacterLimitCheck(),new HTMLCheck(),new CopyrightCheck());
-       
         mediator.send(this,  chain.handle(message));
     } 
         
 
     public void receive(String message, Colleague colleague) {
+        if(message !=null)
         System.out.printf("%s para %s: %s\n", colleague.getName(), this.getName(), message);
     }
 }
