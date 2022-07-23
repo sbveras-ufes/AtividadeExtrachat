@@ -1,5 +1,9 @@
 package com.pss.chat;
 
+import Chain.CharacterLimitCheck;
+import Chain.Check;
+import Chain.CopyrightCheck;
+import Chain.HTMLCheck;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,17 +24,9 @@ public class ChatParticipant extends Colleague {
     }
 
     public void send(String message) {
-        String Fmessage= message.replaceAll("IBM", "***");
-//        Fmessage= message.replaceAll("Apple", "*****");
-//        Fmessage= message.replaceAll("Microsoft", "*********");
-        if (message.contains("<img")){
-            System.out.println("HTML proibido");
-            return;
-    }
-        if (message.length()<= 280)
-        mediator.send(this, Fmessage);
-        else    
-        System.out.println("Mensagem muito grande! Limite: 280c");
+        Check chain = Check.set(new CharacterLimitCheck(),new HTMLCheck(),new CopyrightCheck());
+       
+        mediator.send(this,  chain.handle(message));
     } 
         
 

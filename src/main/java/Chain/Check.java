@@ -11,6 +11,11 @@ package Chain;
  */
 public abstract class Check {
     private Check next;
+    private String message;
+
+//    public Check(String message) {
+//        this.message = message;
+//    }
     
 
 public static Check set (Check primeiro,Check... chain){
@@ -21,10 +26,10 @@ public static Check set (Check primeiro,Check... chain){
     }
     return primeiro;
 }
-public abstract boolean handle(String message);
+public abstract String handle(String message);
 
-boolean Next(String message){
-    if(next==null) return true;
+String Next(String message){
+    if(next==null) return message;
     else 
         return next.handle(message);
 }

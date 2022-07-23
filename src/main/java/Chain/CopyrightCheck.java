@@ -9,6 +9,14 @@ package Chain;
  *
  * @author UFES
  */
-public class CopyrightCheck {
+public class CopyrightCheck extends Check{
     
+    @Override
+    public String handle(String message){
+    message= message.replaceAll("IBM", "***");
+    message= message.replaceAll("Apple", "*****");
+    message= message.replaceAll("Microsoft", "*********");
+    
+    return Next(message);
+    }   
 }

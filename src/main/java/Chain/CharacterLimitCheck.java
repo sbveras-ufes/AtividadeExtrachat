@@ -9,6 +9,18 @@ package Chain;
  *
  * @author UFES
  */
-public class CharacterLimitCheck {
+public class CharacterLimitCheck extends Check{
+  private String message;
+  
     
+  @Override
+    public String handle(String message){
+        if (message.length()<= 280)
+       return Next(message);
+        else{    
+        return ("Mensagem muito grande! Limite: 280c");
+        
+        }
+    }  
 }
+
