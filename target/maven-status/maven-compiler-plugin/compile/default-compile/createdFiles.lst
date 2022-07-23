@@ -1,0 +1,6 @@
+com\pss\chat\Colleague.class
+com\pss\chat\ChatRoom.class
+com\pss\chat\Mediator.class
+com\pss\chat\ChatParticipant.class
+com\pss\chat\Bot.class
+com\pss\chat\Chat.class
