@@ -18,7 +18,8 @@ public class CharacterLimitCheck extends Check{
         if (message.length()<= 280)
        return Next(message);
         else{    
-        return ("Mensagem muito grande! Limite: 280c");
+            System.out.println("Mensagem muito grande! Limite: 280c");
+            return null;
         
         }
     }  
