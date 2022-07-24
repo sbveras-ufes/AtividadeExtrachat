@@ -6,10 +6,9 @@ public class Chat {
         
         Mediator chatRoom = new ChatRoom();
 
-        Colleague a = chatRoom.createColleague("a", "HUMANO");
-        Colleague b = chatRoom.createColleague("André", "HUMANO");
-        Colleague c = chatRoom.createColleague("Rômulo", "HUMANO");
-        Colleague vinicius = chatRoom.createColleague("Vinicius", "HUMANO");
+        Colleague a = chatRoom.createColleague("Fulano", "HUMANO");
+        Colleague b = chatRoom.createColleague("Sicrano", "HUMANO");
+        Colleague c = chatRoom.createColleague("Beltrano", "HUMANO");
         Colleague bot=chatRoom.createColleague("Robô 1", "BOT");
 
         
