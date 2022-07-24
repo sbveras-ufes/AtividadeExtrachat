@@ -13,10 +13,6 @@ public abstract class Check {
     private Check next;
     private String message;
 
-//    public Check(String message) {
-//        this.message = message;
-//    }
-    
 
 public static Check set (Check primeiro,Check... chain){
     Check atual=primeiro;

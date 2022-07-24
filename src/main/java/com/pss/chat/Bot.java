@@ -1,5 +1,7 @@
 package com.pss.chat;
 
+import java.io.File;
+
 public class Bot extends Colleague {
 
     private String name;
@@ -20,4 +22,6 @@ public class Bot extends Colleague {
     public void receive(String message, Colleague colleague) {
         System.out.printf("*** %s para %s: %s\n ****", colleague.getName(), this.getName(), message);
     }
+
+
 }
