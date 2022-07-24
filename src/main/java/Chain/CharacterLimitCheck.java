@@ -10,7 +10,7 @@ package Chain;
  * @author UFES
  */
 public class CharacterLimitCheck extends Check{
-  private String message;
+
   
     
   @Override

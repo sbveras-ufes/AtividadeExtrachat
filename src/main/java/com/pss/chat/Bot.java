@@ -1,7 +1,5 @@
 package com.pss.chat;
 
-import java.io.File;
-
 public class Bot extends Colleague {
 
     private String name;

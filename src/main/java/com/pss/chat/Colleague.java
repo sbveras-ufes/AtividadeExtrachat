@@ -1,7 +1,5 @@
 package com.pss.chat;
 
-import java.io.File;
-
 public abstract class Colleague {
 
     protected Mediator mediator;
